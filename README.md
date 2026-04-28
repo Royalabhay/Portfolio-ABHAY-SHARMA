@@ -1,16 +1,22 @@
 # Experimental Scroll Portfolio (React + GSAP)
 
-An advanced scroll-driven portfolio experience built with **React + Vite**, **GSAP ScrollTrigger**, **Lenis smooth scrolling**, **Tailwind CSS**, and an optional **Three.js** element.
+A cinematic, scroll-based UI/UX system built with **React + Vite**, **GSAP ScrollTrigger**, **Lenis**, **Tailwind CSS**, and **Three.js**.
 
-## Features
+## Experience Highlights
 
-- Cinematic fullscreen hero with opening animation and layered depth.
-- Scroll-synced intro text reveals.
-- Advanced multi-layer parallax section with speed-based depth illusion.
-- Horizontal pinned section controlled by vertical scroll.
-- 3D motion section with perspective transforms and Three.js orb.
-- Final CTA reveal with blur/scale/opacity transition.
-- Custom cursor with hover scale and magnetic button interaction.
+- Story-driven, scene-by-scene scroll journey with smooth section continuity.
+- Cinematic hero with layered depth and envelope-style opening reveal.
+- True multi-layer parallax with depth-of-field blur and speed-based motion.
+- Pinned horizontal section and perspective-based 3D motion section.
+- Cursor system with trailing dot, hover growth, and magnetic interactions.
+- Fullscreen overlay menu with submenu micro-animations and active section indicators.
+- Admin-style background control panel:
+  - Dark/Light mode
+  - Theme switch (Space / Electronic / Minimal / Image)
+  - Animation toggle + intensity control
+  - Overlay opacity slider
+  - Custom image URL support
+- Preloader and scroll progress bar for premium polish.
 
 ## Run locally
 
@@ -19,21 +25,25 @@ npm install
 npm run dev
 ```
 
-Build for production:
+## Production build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Structure
+## Project Structure
 
+- `src/components/BackgroundSystem.jsx`
+- `src/components/NavOverlay.jsx`
+- `src/components/AdminPanel.jsx`
 - `src/components/Hero.jsx`
 - `src/components/ParallaxSection.jsx`
 - `src/components/HorizontalScroll.jsx`
+- `src/components/Motion3DSection.jsx`
 - `src/components/Cursor.jsx`
-- `src/hooks/useScrollAnimations.js`
 - `src/hooks/useLenisScroll.js`
-- `src/components/ThreeOrb.jsx`
+- `src/hooks/useScrollAnimations.js`
+- `src/hooks/useMagnetic.js`
 
-All animation logic is split into reusable hooks and component-scoped behavior.
+Animation and interaction logic stays modular and section-oriented for maintainability.
